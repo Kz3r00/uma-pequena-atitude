@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para você 🌅</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(180deg,
+      #320081 0%,
+      #0051ff 25%,
+      #ff3300 60%,
+      #ff8b2c 85%,
+      #fff200 100%);
+    background-attachment: fixed;
+    padding: 24px;
+  }
+
+  .sol {
+    position: fixed;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff6d5 0%, #ffd166 40%, #ff8c42 75%, transparent 100%);
+    filter: blur(2px);
+    opacity: 0.9;
+    z-index: 0;
+    animation: flutuar 6s ease-in-out infinite;
+  }
+
+  @keyframes flutuar {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%      { transform: translateX(-50%) translateY(-10px); }
+  }
+
+  .carta {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 40px 36px;
+    box-shadow: 0 20px 50px rgba(43, 16, 85, 0.35);
+    color: #3a2a4d;
+    line-height: 1.75;
+    animation: aparecer 1.4s ease both;
+  }
+
+  @keyframes aparecer {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .carta h1 {
+    font-size: 1.6rem;
+    color: #b3471f;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .carta .citacao {
+    text-align: center;
+    font-style: italic;
+    color: #7a5c8a;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .carta p {
+    margin-bottom: 16px;
+    font-size: 1.02rem;
+  }
+
+  .carta .assinatura {
+    margin-top: 28px;
+    text-align: right;
+    font-style: italic;
+    color: #b3471f;
+  }
+
+  .carta .rodape {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #8a7a99;
+    border-top: 1px solid rgba(179, 71, 31, 0.2);
+    padding-top: 16px;
+  }
+
+  @media (max-width: 480px) {
+    .carta { padding: 28px 22px; }
+    .carta h1 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="sol"></div>
+
+  <main class="carta">
+    <h1>🌅 Para uma amiga que chegou como um pôr do sol</h1>
+    <p class="citacao">"Algumas pessoas chegam sem fazer barulho, e mesmo assim mudam a cor do nosso dia."</p>
+
+    <p>Oi, <strong>Leeti</strong>!</p>
+
+    <p>Eu fiquei pensando naquela conversa sobre amizade não se resumir a palavras... e resolvi fazer algo diferente. Não é grande coisa, mas foi feito com carinho do jeito que dá pra fazer: com um pouco de código e um pôr do sol de fundo.</p>
+
+    <p>Desde que a gente se conheceu, uma coisa me chamou atenção: a sua educação, o seu jeito gentil de tratar as pessoas. É raro, sabe? E é bonito de ver.</p>
+
+    <p>Você disse que amizade não é só palavra. Concordo. Então essa cartinha aqui é minha forma de dizer, sem pressa, que eu tô feliz de ter te conhecido e que amizade, pra mim, também se constrói com presença, com escuta e com essas pequenas coisas que a gente faz sem esperar nada em troca.</p>
+
+    <p>Que essa amizade seja como o pôr do sol: nada de pressa, cores quentes, e aquele fim de tarde que a gente não quer que acabe.</p>
+
+    <p class="assinatura">Com carinho,<br><strong>Kayky</strong></p>
+
+    <p class="rodape">Feito com ❤️</p>
+  </main>
+
+</body>
+</html>
